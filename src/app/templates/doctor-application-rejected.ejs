@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Application Update | PixelCare</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f3f7fb;
+      color: #243247;
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      padding: 40px 16px;
+      background-color: #f3f7fb;
+    }
+
+    .email-container {
+      width: 100%;
+      max-width: 580px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 35px rgba(28, 50, 80, 0.07);
+    }
+
+    .email-header {
+      padding: 30px 40px;
+      border-bottom: 1px solid #edf1f5;
+    }
+
+    .brand-icon {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      background-color: #e6f5f3;
+      color: #0b9688;
+      border-radius: 10px;
+      font-size: 23px;
+      font-weight: 700;
+      vertical-align: middle;
+      margin-right: 9px;
+    }
+
+    .brand-name {
+      color: #153e75;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      vertical-align: middle;
+    }
+
+    .email-content {
+      padding: 42px 40px 35px;
+    }
+
+    .status-icon {
+      width: 66px;
+      height: 66px;
+      line-height: 66px;
+      text-align: center;
+      background-color: #fff1f0;
+      border: 1px solid #fbd5d1;
+      border-radius: 50%;
+      color: #dc5353;
+      font-size: 31px;
+      font-weight: 700;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-top: 23px;
+      padding: 7px 12px;
+      background-color: #fff1f0;
+      color: #c74747;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      margin: 20px 0 12px;
+      color: #183b65;
+      font-size: 29px;
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .description {
+      margin: 0;
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .highlight-name {
+      color: #183b65;
+      font-weight: 700;
+    }
+
+    .status-card {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fff7f6;
+      border: 1px solid #f8e2df;
+      border-radius: 12px;
+    }
+
+    .status-title {
+      margin: 0 0 8px;
+      color: #b94747;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .status-description {
+      margin: 0;
+      color: #8b6565;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .reason-card {
+      margin-top: 22px;
+      padding: 18px;
+      background-color: #fff9ed;
+      border: 1px solid #f5e7c9;
+      border-left: 4px solid #e5ad4b;
+      border-radius: 8px;
+    }
+
+    .reason-title {
+      margin: 0 0 10px;
+      color: #8b6a35;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .reason-text {
+      margin: 0;
+      color: #806b4e;
+      font-size: 13px;
+      line-height: 1.8;
+      word-break: break-word;
+    }
+
+    .support-note {
+      margin-top: 25px;
+      padding: 16px 17px;
+      background-color: #f5f9ff;
+      border-left: 3px solid #0b9688;
+      border-radius: 5px;
+      color: #64748b;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .email-footer {
+      padding: 25px 35px 30px;
+      background-color: #f8fafc;
+      border-top: 1px solid #edf1f5;
+      text-align: center;
+    }
+
+    .footer-title {
+      margin: 0 0 8px;
+      color: #183b65;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-text {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .footer-brand {
+      color: #0b9688;
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .email-wrapper {
+        padding: 20px 10px !important;
+      }
+
+      .email-header {
+        padding: 23px 22px !important;
+      }
+
+      .email-content {
+        padding: 32px 22px 28px !important;
+      }
+
+      .main-title {
+        font-size: 25px !important;
+      }
+
+      .status-card,
+      .reason-card {
+        padding: 16px !important;
+      }
+
+      .email-footer {
+        padding: 22px 18px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hidden Preheader -->
+  <div
+    style="
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      color: transparent;
+      visibility: hidden;
+    "
+  >
+    An update regarding your PixelCare doctor application.
+  </div>
+
+  <table
+    role="presentation"
+    width="100%"
+    cellpadding="0"
+    cellspacing="0"
+    border="0"
+    class="email-wrapper"
+  >
+    <tr>
+      <td align="center">
+
+        <!-- Main Email Container -->
+        <table
+          role="presentation"
+          width="580"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+          class="email-container"
+          style="
+            width: 100%;
+            max-width: 580px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+          "
+        >
+
+          <!-- Header -->
+          <tr>
+            <td class="email-header" style="padding: 30px 40px;">
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <span class="brand-icon">&#10010;</span>
+                  </td>
+                  <td>
+                    <span class="brand-name">PixelCare</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Main Content -->
+          <tr>
+            <td class="email-content" style="padding: 42px 40px 35px;">
+
+              <!-- Application Status Icon -->
+              <table role="presentation" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="status-icon">
+                    &#10005;
+                  </td>
+                </tr>
+              </table>
+
+              <span class="eyebrow">
+                Application Update
+              </span>
+
+              <h1 class="main-title">
+                Your Application Status
+              </h1>
+
+              <p class="description">
+                Hello Dr.
+                <strong class="highlight-name"><%= name %></strong>,
+                <br /><br />
+
+                Thank you for your interest in joining
+                the PixelCare healthcare network and taking the time
+                to submit your doctor application.
+
+                <br /><br />
+
+                After carefully reviewing your application,
+                we regret to inform you that we are unable to
+                approve your application at this time.
+              </p>
+
+              <!-- Status Information Card -->
+              <div class="status-card">
+
+                <p class="status-title">
+                  &#10005; Application Not Approved
+                </p>
+
+                <p class="status-description">
+                  Your doctor application has not been approved
+                  following our review process.
+                  We appreciate your interest in becoming part
+                  of the PixelCare healthcare network.
+                </p>
+
+              </div>
+
+              <!-- Conditional Rejection Reason -->
+              <% if (reason) { %>
+
+                <div class="reason-card">
+
+                  <p class="reason-title">
+                    Application Review Feedback
+                  </p>
+
+                  <p class="reason-text">
+                    <strong>Reason:</strong>
+                    <%= reason %>
+                  </p>
+
+                </div>
+
+              <% } %>
+
+              <!-- Support Information -->
+              <div class="support-note">
+
+                <strong style="color: #183b65;">
+                  Need more information?
+                </strong>
+
+                <br /><br />
+
+                If you have questions about this decision
+                or need further clarification, please contact
+                our support team for assistance.
+
+              </div>
+
+              <p
+                class="description"
+                style="margin-top: 25px; font-size: 13px;"
+              >
+                We sincerely appreciate your interest in PixelCare
+                and wish you continued success in your medical career.
+                <br /><br />
+
+                Thank you for your understanding.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td
+              class="email-footer"
+              style="padding: 25px 35px 30px; text-align: center;"
+            >
+
+              <p class="footer-title">
+                Your Health, Our Priority.
+              </p>
+
+              <p class="footer-text">
+                Secure healthcare, made simple.
+              </p>
+
+              <p class="footer-text" style="margin-top: 15px;">
+                &copy; <%= new Date().getFullYear() %>
+                <span class="footer-brand">PixelCare</span>.
+                All rights reserved.
+              </p>
+
+              <p class="footer-text" style="margin-top: 5px;">
+                This is an automated message. Please do not reply
+                to this email.
+              </p>
+
+            </td>
+          </tr>
+
+        </table>
+        <!-- End Main Email Container -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

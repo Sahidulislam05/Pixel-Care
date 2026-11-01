@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Welcome to PixelCare</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f3f7fb;
+        color: #243247;
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      .email-wrapper {
+        width: 100%;
+        padding: 40px 16px;
+        background-color: #f3f7fb;
+      }
+
+      .email-container {
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 35px rgba(28, 50, 80, 0.07);
+      }
+
+      .email-header {
+        padding: 30px 40px;
+        border-bottom: 1px solid #edf1f5;
+      }
+
+      .brand-icon {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background-color: #e6f5f3;
+        color: #0b9688;
+        border-radius: 10px;
+        font-size: 23px;
+        font-weight: 700;
+        vertical-align: middle;
+        margin-right: 9px;
+      }
+
+      .brand-name {
+        color: #153e75;
+        font-size: 23px;
+        font-weight: 800;
+        letter-spacing: -0.8px;
+        vertical-align: middle;
+      }
+
+      .email-content {
+        padding: 40px;
+      }
+
+      .welcome-banner {
+        padding: 32px 22px;
+        background-color: #eaf7f5;
+        border-radius: 14px;
+        text-align: center;
+      }
+
+      .welcome-icon {
+        width: 66px;
+        height: 66px;
+        line-height: 66px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border: 1px solid #d4eee9;
+        border-radius: 50%;
+        color: #0b9688;
+        font-size: 34px;
+        font-weight: 700;
+      }
+
+      .welcome-label {
+        margin-top: 20px;
+        color: #0b9688;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .main-title {
+        margin: 12px 0 10px;
+        color: #183b65;
+        font-size: 29px;
+        line-height: 1.35;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      .welcome-name {
+        color: #0b9688;
+      }
+
+      .banner-description {
+        margin: 0;
+        color: #54716e;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .description {
+        margin: 25px 0 0;
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.9;
+      }
+
+      .section-title {
+        margin: 32px 0 16px;
+        color: #183b65;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .feature-card {
+        margin-bottom: 12px;
+        padding: 16px;
+        background-color: #f8fafc;
+        border: 1px solid #edf1f5;
+        border-radius: 10px;
+      }
+
+      .feature-icon {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        text-align: center;
+        background-color: #e6f5f3;
+        border-radius: 10px;
+        font-size: 21px;
+      }
+
+      .feature-title {
+        margin: 0 0 5px;
+        color: #183b65;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .feature-description {
+        margin: 0;
+        color: #8492a6;
+        font-size: 11px;
+        line-height: 1.7;
+      }
+
+      .closing-note {
+        margin-top: 25px;
+        padding: 17px;
+        background-color: #f5f9ff;
+        border-left: 3px solid #0b9688;
+        border-radius: 5px;
+        color: #64748b;
+        font-size: 12px;
+        line-height: 1.8;
+      }
+
+      .email-footer {
+        padding: 25px 35px 30px;
+        background-color: #f8fafc;
+        border-top: 1px solid #edf1f5;
+        text-align: center;
+      }
+
+      .footer-title {
+        margin: 0 0 8px;
+        color: #183b65;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .footer-text {
+        margin: 0;
+        color: #94a3b8;
+        font-size: 11px;
+        line-height: 1.8;
+      }
+
+      .footer-brand {
+        color: #0b9688;
+        font-weight: 700;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-wrapper {
+          padding: 20px 10px !important;
+        }
+
+        .email-header {
+          padding: 23px 22px !important;
+        }
+
+        .email-content {
+          padding: 25px 20px !important;
+        }
+
+        .welcome-banner {
+          padding: 27px 15px !important;
+        }
+
+        .main-title {
+          font-size: 25px !important;
+        }
+
+        .feature-card {
+          padding: 13px !important;
+        }
+
+        .email-footer {
+          padding: 22px 18px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hidden Preheader -->
+    <div
+      style="
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        color: transparent;
+        visibility: hidden;
+      "
+    >
+      Welcome to PixelCare! Your healthcare journey starts here.
+    </div>
+
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      class="email-wrapper"
+    >
+      <tr>
+        <td align="center">
+          <!-- Main Email Container -->
+          <table
+            role="presentation"
+            width="580"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            class="email-container"
+            style="
+              width: 100%;
+              max-width: 580px;
+              background-color: #ffffff;
+              border-radius: 16px;
+              overflow: hidden;
+            "
+          >
+            <!-- Header -->
+            <tr>
+              <td class="email-header" style="padding: 30px 40px">
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <span class="brand-icon">&#10010;</span>
+                    </td>
+                    <td>
+                      <span class="brand-name">PixelCare</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td class="email-content" style="padding: 40px">
+                <!-- Welcome Banner -->
+                <div
+                  class="welcome-banner"
+                  style="
+                    padding: 32px 22px;
+                    background-color: #eaf7f5;
+                    border-radius: 14px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    class="welcome-icon"
+                    style="
+                      width: 66px;
+                      height: 66px;
+                      line-height: 66px;
+                      margin: 0 auto;
+                      background-color: #ffffff;
+                      border: 1px solid #d4eee9;
+                      border-radius: 50%;
+                      color: #0b9688;
+                      font-size: 34px;
+                    "
+                  >
+                    &#10084;
+                  </div>
+
+                  <p class="welcome-label">Welcome aboard</p>
+
+                  <h1 class="main-title">
+                    Welcome to
+                    <span class="welcome-name">PixelCare!</span>
+                  </h1>
+
+                  <p class="banner-description">
+                    Hello <strong><%= name %></strong>, we're glad you're here!
+                  </p>
+                </div>
+
+                <!-- Introduction -->
+                <p class="description">
+                  Thank you for joining PixelCare. Your account has been
+                  successfully created, and we're excited to be part of your
+                  healthcare journey.
+
+                  <br /><br />
+
+                  We've made healthcare management easier, smarter, and more
+                  accessible — all in one place.
+                </p>
+
+                <!-- Features Section -->
+                <h2 class="section-title">Everything you need, in one place</h2>
+
+                <!-- Feature 1 -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  class="feature-card"
+                  style="
+                    margin-bottom: 12px;
+                    background-color: #f8fafc;
+                    border: 1px solid #edf1f5;
+                    border-radius: 10px;
+                  "
+                >
+                  <tr>
+                    <td
+                      width="55"
+                      valign="middle"
+                      style="padding: 13px 0 13px 13px"
+                    >
+                      <div class="feature-icon">&#128197;</div>
+                    </td>
+                    <td valign="middle" style="padding: 13px">
+                      <p class="feature-title">Book Appointments</p>
+                      <p class="feature-description">
+                        Schedule appointments with healthcare professionals
+                        conveniently.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Feature 2 -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  class="feature-card"
+                  style="
+                    margin-bottom: 12px;
+                    background-color: #f8fafc;
+                    border: 1px solid #edf1f5;
+                    border-radius: 10px;
+                  "
+                >
+                  <tr>
+                    <td
+                      width="55"
+                      valign="middle"
+                      style="padding: 13px 0 13px 13px"
+                    >
+                      <div class="feature-icon">&#129658;</div>
+                    </td>
+                    <td valign="middle" style="padding: 13px">
+                      <p class="feature-title">Consult with Doctors</p>
+                      <p class="feature-description">
+                        Connect with doctors and get the healthcare guidance you
+                        need.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Feature 3 -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  class="feature-card"
+                  style="
+                    margin-bottom: 12px;
+                    background-color: #f8fafc;
+                    border: 1px solid #edf1f5;
+                    border-radius: 10px;
+                  "
+                >
+                  <tr>
+                    <td
+                      width="55"
+                      valign="middle"
+                      style="padding: 13px 0 13px 13px"
+                    >
+                      <div class="feature-icon">&#128203;</div>
+                    </td>
+                    <td valign="middle" style="padding: 13px">
+                      <p class="feature-title">Manage Health Records</p>
+                      <p class="feature-description">
+                        Keep your important health information organized and
+                        accessible.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Closing Note -->
+                <div
+                  class="closing-note"
+                  style="
+                    margin-top: 25px;
+                    padding: 17px;
+                    background-color: #f5f9ff;
+                    border-left: 3px solid #0b9688;
+                    border-radius: 5px;
+                  "
+                >
+                  <strong style="color: #183b65">
+                    Your Health, Our Priority.
+                  </strong>
+                  <br />
+                  We're here to make your healthcare experience simpler and
+                  better. Thank you for trusting PixelCare!
+                </div>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                class="email-footer"
+                style="padding: 25px 35px 30px; text-align: center"
+              >
+                <p class="footer-title">Your Health, Our Priority.</p>
+
+                <p class="footer-text">Secure healthcare, made simple.</p>
+
+                <p class="footer-text" style="margin-top: 15px">
+                  &copy; <%= new Date().getFullYear() %>
+                  <span class="footer-brand">PixelCare</span>. All rights
+                  reserved.
+                </p>
+
+                <p class="footer-text" style="margin-top: 5px">
+                  This is an automated message. Please do not reply to this
+                  email.
+                </p>
+              </td>
+            </tr>
+          </table>
+          <!-- End Main Email Container -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Verify Your Email | PixelCare</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f3f7fb;
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+        color: #243247;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      img {
+        border: 0;
+        display: block;
+      }
+
+      .email-wrapper {
+        width: 100%;
+        background-color: #f3f7fb;
+        padding: 40px 16px;
+      }
+
+      .email-container {
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 35px rgba(28, fifty, 80, 0.07);
+      }
+
+      .email-header {
+        padding: 30px 40px;
+        border-bottom: 1px solid #edf1f5;
+      }
+
+      .brand-name {
+        color: #153e75;
+        font-size: 23px;
+        font-weight: 800;
+        letter-spacing: -0.8px;
+        vertical-align: middle;
+      }
+
+      .brand-icon {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        background-color: #e6f5f3;
+        color: #0b9688;
+        border-radius: 10px;
+        font-size: 23px;
+        font-weight: 700;
+        vertical-align: middle;
+        margin-right: 9px;
+      }
+
+      .email-content {
+        padding: 42px 40px 35px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 7px 12px;
+        background-color: #e8f7f5;
+        color: #07877c;
+        border-radius: 30px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .main-title {
+        margin: 22px 0 12px;
+        color: #183b65;
+        font-size: 29px;
+        line-height: 1.3;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      .description {
+        margin: 0;
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .email-address {
+        color: #183b65;
+        font-weight: 700;
+        word-break: break-word;
+      }
+
+      .otp-section {
+        margin: 32px 0 25px;
+        padding: 25px 20px;
+        background-color: #f5f9ff;
+        border: 1px solid #e3ebf6;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .otp-label {
+        margin: 0 0 15px;
+        color: #64748b;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .otp-code {
+        display: inline-block;
+        padding: 13px 22px;
+        background-color: #e6f5f3;
+        border: 1px dashed #a8dcd5;
+        border-radius: 9px;
+        color: #087f73;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 10px;
+        line-height: 1.4;
+      }
+
+      .expiry-text {
+        margin: 16px 0 0;
+        color: #8492a6;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .security-note {
+        margin-top: 28px;
+        padding: 15px 17px;
+        background-color: #fff9ed;
+        border-left: 3px solid #e9ad49;
+        border-radius: 5px;
+        color: #8b6a35;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .email-footer {
+        padding: 25px 35px 30px;
+        background-color: #f8fafc;
+        border-top: 1px solid #edf1f5;
+        text-align: center;
+      }
+
+      .footer-title {
+        margin: 0 0 8px;
+        color: #183b65;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .footer-text {
+        margin: 0;
+        color: #94a3b8;
+        font-size: 11px;
+        line-height: 1.8;
+      }
+
+      .footer-brand {
+        color: #0b9688;
+        font-weight: 700;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .email-wrapper {
+          padding: 20px 10px !important;
+        }
+
+        .email-header {
+          padding: 23px 22px !important;
+        }
+
+        .email-content {
+          padding: 32px 22px 28px !important;
+        }
+
+        .main-title {
+          font-size: 25px !important;
+        }
+
+        .otp-section {
+          padding: 22px 12px !important;
+        }
+
+        .otp-code {
+          font-size: 25px !important;
+          letter-spacing: 7px !important;
+          padding: 12px 15px !important;
+        }
+
+        .email-footer {
+          padding: 22px 18px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hidden Preheader -->
+    <div
+      style="
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        color: transparent;
+        visibility: hidden;
+      "
+    >
+      Your PixelCare verification code is ready. Verify your email address
+      securely.
+    </div>
+
+    <table
+      role="presentation"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      class="email-wrapper"
+    >
+      <tr>
+        <td align="center">
+          <!-- Main Email Container -->
+          <table
+            role="presentation"
+            width="580"
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            class="email-container"
+            style="
+              width: 100%;
+              max-width: 580px;
+              background-color: #ffffff;
+              border-radius: 16px;
+              overflow: hidden;
+            "
+          >
+            <!-- Header -->
+            <tr>
+              <td class="email-header" style="padding: 30px 40px">
+                <table role="presentation" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <span class="brand-icon">✚</span>
+                    </td>
+                    <td>
+                      <span class="brand-name">PixelCare</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Email Content -->
+            <tr>
+              <td class="email-content" style="padding: 42px 40px 35px">
+                <span class="eyebrow"> Email Verification </span>
+
+                <h1 class="main-title">Verify your email address</h1>
+
+                <p class="description">
+                  Hello <strong style="color: #183b65"><%= name %></strong>,
+                  <br /><br />
+
+                  Welcome to PixelCare! We're excited to have you with us. We
+                  received a request to verify the email address associated with
+                  your account:
+                  <br />
+
+                  <span class="email-address"><%= email %></span>
+                </p>
+
+                <!-- OTP Box -->
+                <div class="otp-section">
+                  <p class="otp-label">Your verification code</p>
+
+                  <div class="otp-code"><%= otp %></div>
+
+                  <p class="expiry-text">
+                    This code will expire in
+                    <strong style="color: #183b65">
+                      <%= expirationMinutes %> minutes </strong
+                    >.
+                    <br />
+                    Please use it before it expires.
+                  </p>
+                </div>
+
+                <!-- Security Notice -->
+                <div class="security-note">
+                  <strong>🔒 Security reminder</strong>
+                  <br />
+                  Never share this verification code with anyone. PixelCare will
+                  never ask you to share your OTP. If you didn't request this
+                  verification, you can safely ignore this email.
+                </div>
+
+                <p
+                  class="description"
+                  style="margin-top: 25px; font-size: 13px"
+                >
+                  Need help? We're always here to support you.
+                  <br />
+                  Thank you for choosing <strong>PixelCare</strong>.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                class="email-footer"
+                style="padding: 25px 35px 30px; text-align: center"
+              >
+                <p class="footer-title">Your Health, Our Priority.</p>
+
+                <p class="footer-text">Secure healthcare, made simple.</p>
+
+                <p class="footer-text" style="margin-top: 15px">
+                  &copy; <%= new Date().getFullYear() %>
+                  <span class="footer-brand">PixelCare</span>. All rights
+                  reserved.
+                </p>
+
+                <p class="footer-text" style="margin-top: 5px">
+                  This is an automated message. Please do not reply to this
+                  email.
+                </p>
+              </td>
+            </tr>
+          </table>
+          <!-- End Main Email Container -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
